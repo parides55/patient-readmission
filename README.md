@@ -1,12 +1,6 @@
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-## Template Instructions
 
-Welcome,
-
-This is the Code Institute student template for the bring your own data project option in Predictive Analytics. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
-
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
 
 ## How to use this repo
 
@@ -45,15 +39,48 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size and to have a shorter model training time. If you are doing an image recognition project, we suggest you consider using an image shape that is 100px × 100px or 50px × 50px, to ensure the model meets the performance requirement but is smaller than 100Mb for a smoother push to GitHub. A reasonably sized image set is ~5000 images, but you can choose ~10000 lines for numeric or textual data. 
+
+Tha dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/dubradave/hospital-readmissions) and provides access to ten years of patient information. Each row represents a patient and each column contains information regarding the patient's hospital admission and if the patient has been readmitted.
+
+| Value             | Meaning                                   | Unit           |
+|-------------------|-------------------------------------------|----------------|
+| age               | Age group of the patient                  | Years          |
+| time_in_hospital  | Duration of hospital stay                 | Days           |
+| n_lab_procedures  | Number of lab procedures performed        | Count          |
+| n_procedures      | Number of other procedures performed      | Count          |
+| n_medications     | Number of medications prescribed          | Count          |
+| n_outpatient      | Number of outpatient visits               | Count          |
+| n_inpatient       | Number of inpatient visits                | Count          |
+| n_emergency       | Number of emergency visits                | Count          |
+| medical_specialty | Medical specialty of the attending doctor | Speciality of physician|
+| diag_1            | Primary diagnosis                         | Diagnosis Code |
+| diag_2            | Secondary diagnosis                       | Diagnosis Code |
+| diag_3            | Tertiary diagnosis                        | Diagnosis Code |
+| glucose_test      | Whether a glucose test was performed      | high(>200)/ normal/ not performed|
+| A1Ctest           | Whether an A1C test was performed         | high(>7%)/ normal/ not performed|
+| change            | Change in diabetes medication             | Yes/No         |
+| diabetes_med      | Whether diabetes medication was prescribed| Yes/No         |
+| readmitted        | Whether the patient was readmitted        | Yes/No         |
+ 
 
 
-## Business Requirements
+## Business Requiremen
 * Describe your business requirements
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+
+* Hypothesis 1:
+Patients with a higher number of lab procedures are more likely to be readmitted.
+This hypothesis assumes that a higher number of lab procedures indicates a more severe or complex medical condition, which could lead to a higher chance of readmission.
+
+* Hypothesis 2:
+Patients who had a change in their diabetes medication during their hospital stay are more likely to be readmitted.
+This hypothesis suggests that changes in diabetes management might lead to instability in blood sugar control, increasing the likelihood of readmission.
+
+* Hypothesis 3:
+Patients with multiple comorbidities (diagnosed with multiple conditions) have a higher probability of readmission.
+This hypothesis is based on the idea that patients with multiple health issues are more challenging to manage and therefore more likely to experience complications leading to readmission.
 
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
