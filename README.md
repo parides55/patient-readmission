@@ -71,20 +71,29 @@ This project aims to reduce patient readmission rates to improve healthcare qual
 ## Hypothesis and how to validate?
 
 * Hypothesis 1:
+
 Patients with a higher number of lab procedures are more likely to be readmitted.
 This hypothesis assumes that a higher number of lab procedures indicates a more severe or complex medical condition, which could lead to a higher chance of readmission.
 
 * Hypothesis 2:
+
 Patients who had a change in their diabetes medication during their hospital stay are more likely to be readmitted.
 This hypothesis suggests that changes in diabetes management might lead to instability in blood sugar control, increasing the likelihood of readmission.
 
 * Hypothesis 3:
+
 Patients with multiple comorbidities (diagnosed with multiple conditions) have a higher probability of readmission.
 This hypothesis is based on the idea that patients with multiple health issues are more challenging to manage and therefore more likely to experience complications leading to readmission.
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
 
-* List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
+* Business requirement 1: Data Visualization and Correlation study
+
+ - We need to perform a correlation study to determine which features correlate most closely to the target.
+ - A Pearson's correlation will indicate linear relationships between numerical variables.
+ - A Spearman's correlation will measure the monotonic relationships between variables.
+
+* Business requirement 2:
 
 ## ML Business Case
 
