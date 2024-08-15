@@ -1,5 +1,3 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
 ## How to use this repo
 
 1. Use this template to create your GitHub project repo
