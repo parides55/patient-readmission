@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-DATASET = pd.read_csv(f"outputs/datasets/collection/HospitalReadmissions.csv").head(10)
+DATASET = pd.read_csv(f"inputs/datasets/raw/hospital_readmissions.csv").head(10)
 
 def page_summary_body():
     st.write(f'#### **Project Summary**\n\n')
@@ -34,8 +34,10 @@ def page_summary_body():
         f"glucose levels, and A1C test results.\n"
         f"* Treatment Information: Whether the patient's treatment plan included changes (change) "
         f"in their medication, and whether diabetes medications were administered (diabetes_med).\n"
-        f"* Target Variable: A binary indicator (readmitted) showing whether the patient was readmitted."
+        f"* Target Variable: A binary indicator (readmitted) showing whether the patient was readmitted.\n"
     )
+    
+    st.write(f"Below find the first 10 rows of the dataset.\n")
     
     st.dataframe(DATASET)
     
