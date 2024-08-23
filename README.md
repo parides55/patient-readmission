@@ -90,8 +90,14 @@ This hypothesis is based on the idea that patients with multiple health issues a
  - We need to perform a correlation study to determine which features correlate most closely to the target.
  - A Pearson's correlation will indicate linear relationships between numerical variables.
  - A Spearman's correlation will measure the monotonic relationships between variables.
+ - A Predicitve Power Score can also be used to determine relationships between the variables and if they have any predictive power to against the target variable.
+ - This will be performed during the Data Collection and Preparation steps of the CRISP-DM workflow. 
 
-* Business requirement 2:
+* Business requirement 2: Classification Model
+
+ - We need to predict whether a patient will be readmitted or not.
+ - For this task we need to build a binary classification model.
+ - This will be performed during the Modeling and Evaluation step of the CRISP -M workflow.
 
 ## ML Business Case
 
