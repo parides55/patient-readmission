@@ -75,12 +75,11 @@ This hypothesis assumes that a higher number of lab procedures indicates a more 
 
 * Hypothesis 2:
 
-Patients who had a change in their diabetes medication during their hospital stay are more likely to be readmitted.
-This hypothesis suggests that changes in diabetes management might lead to instability in blood sugar control, increasing the likelihood of readmission.
+Patients who had a change in their diabetes medication during their hospital stay are more likely to be readmitted. This hypothesis suggests that changes in diabetes management might lead to instability in blood sugar control, increasing the likelihood of readmission.
 
 * Hypothesis 3:
 
-Patients who had a change in their diabetes medication during their hospital stay are more likely to be readmitted. This hypothesis suggests that changes in diabetes management might lead to instability in blood sugar control, increasing the likelihood of readmission.
+Patients of higher age have a higher probability of readmission. This hypothesis is based on the idea that patients of higher age are more likely to have multiple chronicle health issues leading to readmissions.
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
 
