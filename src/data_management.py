@@ -7,8 +7,8 @@ import plotly.express as px
 import joblib
 
 # @st.cache(suppress_st_warning=True, allow_output_mutation=True)
-def load_hospital_dataset():
-    df = pd.read_csv("outputs/datasets/collection/HospitalReadmissions.csv")
+def load_hospital_dataset(file_name):
+    df = pd.read_csv(f"outputs/datasets/collection/{file_name}")
     return df
 
 
@@ -31,6 +31,6 @@ def plot_numerical(df, col):
     
 
 def plot_parallel_plot():
-    df_parallel_to_plot = pd.read_csv("outputs/datasets/collection/HospitalReadmissionsParallel.csv")
-    fig = px.parallel_categories(df_parallel_to_plot, color='readmitted')
+    df_parallel = load_hospital_dataset("HospitalReadmissionsParallel.csv")
+    fig = px.parallel_categories(df_parallel, color='readmitted', color_continuous_scale="bluered")
     st.plotly_chart(fig)
