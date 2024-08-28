@@ -10,6 +10,12 @@ def page_hypothesis_body():
         f"or complex medical condition, which could lead to a higher chance of readmission."
     )
     
+    st.write(f"##### Findings:\n\n")
+    
+    st.warning(
+        f"* "
+    )
+    
     st.info(
         f"###### **Hypothesis 2**\n"
         f"Patients who had a change in their diabetes medication during their hospital stay "
@@ -18,10 +24,21 @@ def page_hypothesis_body():
         f"likelihood of readmission."
     )
     
+    st.write(f"##### Findings:\n\n")
+    
+    st.warning(
+        f"* "
+    )
+    
     st.info(
         f"###### **Hypothesis 3**\n"
-        f"Patients with multiple comorbidities (diagnosed with multiple conditions) have a "
-        f"higher probability of readmission. This hypothesis is based on the idea that "
-        f"patients with multiple health issues are more challenging to manage and therefore "
-        f"more likely to experience complications leading to readmission."
+        f"Patients of higher age have a higher probability of readmission. This hypothesis "
+        f"is based on the idea that patients of higher age are more likely to have multiple "
+        f"chronicle health issues leading to readmissions."
+    )
+    
+    st.write(f"##### Findings:\n\n")
+    
+    st.warning(
+        f"* "
     )
