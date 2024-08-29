@@ -1,36 +1,37 @@
-## How to use this repo
+# Patient Readmission Predictor - A Predictive Classification Model for predicting patient's readmission
 
-1. Use this template to create your GitHub project repo
+## Table of Contents
 
-1. Log into your cloud IDE with your GitHub account.
-
-1. On your Dashboard, click on the New Workspace button
-
-1. Paste in the URL you copied from GitHub earlier
-
-1. Click Create
-
-1. Wait for the workspace to open. This can take a few minutes.
-
-1. Open a new terminal and `pip3 install -r requirements.txt`
-
-1. Open the jupyter_notebooks directory, and click on the notebook you want to open.
-
-1. Click the kernel button and choose Python Environments.
-
-Note that the kernel says Python 3.8.18 as it inherits from the workspace, so it will be Python-3.8.18 as installed by our template. To confirm this, you can use `! python --version` in a notebook code cell.
-
-## Cloud IDE Reminders
-
-To log into the Heroku tool belt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- [Patient Readmission Predictor - A Predictive Classification Model for predicting patient's readmission](#patient-readmission-predictor---a-predictive-classification-model-for-predicting-patients-readmission)
+  - [Table of Contents](#table-of-contents)
+  - [Dataset Content](#dataset-content)
+  - [Business Requirements](#business-requirements)
+  - [Hypothesis and how to validate?](#hypothesis-and-how-to-validate)
+  - [The rationale to map the business requirements to the Data Visualizations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
+  - [ML Business Case](#ml-business-case)
+  - [Epics and User Stories](#epics-and-user-stories)
+  - [Dashboard Design](#dashboard-design)
+    - [Page 1:](#page-1)
+    - [Page 2:](#page-2)
+    - [Page 3:](#page-3)
+    - [Page 4:](#page-4)
+    - [Page 5:](#page-5)
+  - [Technologies Used](#technologies-used)
+    - [Languages:](#languages)
+    - [Python Packages](#python-packages)
+  - [Testing](#testing)
+    - [Manual Testing](#manual-testing)
+      - [User Story Testing](#user-story-testing)
+    - [Validation](#validation)
+    - [Automated Unit Tests](#automated-unit-tests)
+  - [Unfixed Bugs](#unfixed-bugs)
+  - [Deployment](#deployment)
+    - [Heroku](#heroku)
+  - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Media](#media)
+  - [Acknowledgements](#acknowledgements)
 
 ## Dataset Content
 
@@ -56,6 +57,8 @@ Tha dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/dubradave/h
 | diabetes_med      | Whether diabetes medication was prescribed| Yes/No         |
 | readmitted        | Whether the patient was readmitted        | Yes/No         |
 
+[Back to top](#table-of-contents)
+
 ## Business Requirements
 
 This project aims to reduce patient readmission rates to improve healthcare quality and reduce costs. Potential stakeholders/clients can Healthcare providers, hospital administrators, insurance companies.
@@ -66,20 +69,26 @@ This project aims to reduce patient readmission rates to improve healthcare qual
 * Business requirement 2
   - By using a dashboard, the client, can input patient's information and predict whether this patient is likely to be readmitted or not.
 
+[Back to top](#table-of-contents)
+
 ## Hypothesis and how to validate?
 
 * Hypothesis 1:
 
-Patients with a higher number of lab procedures are more likely to be readmitted.
-This hypothesis assumes that a higher number of lab procedures indicates a more severe or complex medical condition, which could lead to a higher chance of readmission.
+  - Patients with a higher number of lab procedures are more likely to be readmitted. This hypothesis assumes that a higher number of lab procedures indicates a more severe or complex medical condition, which could lead to a higher chance of readmission.
+  - **Validation** :
 
 * Hypothesis 2:
 
-Patients who had a change in their diabetes medication during their hospital stay are more likely to be readmitted. This hypothesis suggests that changes in diabetes management might lead to instability in blood sugar control, increasing the likelihood of readmission.
+  - Patients who had a change in their diabetes medication during their hospital stay are more likely to be readmitted. This hypothesis suggests that changes in diabetes management might lead to instability in blood sugar control, increasing the likelihood of readmission.
+  - **Validation** :
 
 * Hypothesis 3:
 
-Patients of higher age have a higher probability of readmission. This hypothesis is based on the idea that patients of higher age are more likely to have multiple chronicle health issues leading to readmissions.
+  - Patients of higher age have a higher probability of readmission. This hypothesis is based on the idea that patients of higher age are more likely to have multiple chronicle health issues leading to readmissions.
+  - **Validation** :
+
+[Back to top](#table-of-contents)
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
 
@@ -97,18 +106,83 @@ Patients of higher age have a higher probability of readmission. This hypothesis
  - For this task we need to build a binary classification model.
  - This will be performed during the Modeling and Evaluation step of the CRISP -M workflow.
 
+[Back to top](#table-of-contents)
+
 ## ML Business Case
 
 * In the previous bullet, you potentially visualized an ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
 
+[Back to top](#table-of-contents)
+
+## Epics and User Stories
+
+[Back to top](#table-of-contents)
+
 ## Dashboard Design
 
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
+### Page 1:
+
+### Page 2:
+
+### Page 3:
+
+### Page 4:
+
+### Page 5:
+
+[Back to top](#table-of-contents)
+
+## Technologies Used
+
+The technologies used throughout the development are listed below:
+
+### Languages:
+
+ - Python
+
+### Python Packages
+
+* [Pandas](https://pandas.pydata.org/docs/index.html) - Open source library for data manipulation and analysis.
+* [Numpy](https://numpy.org/doc/stable/index.html) - Adds support for large, multi-dimensional arrays and matrices, and high-level mathematical functions.
+* [YData Profiling](https://docs.profiling.ydata.ai/latest/) - For data profiling and exploratory data analysis.
+* [Matplotlib](https://matplotlib.org/) - Comprehensive library for creating static, animated and interactive visualisations.
+* [Seaborn](https://seaborn.pydata.org/) - Another data visualisation library for drawing attractive and informative statistical graphics.
+* [Pingouin](https://pingouin-stats.org/build/html/index.html) - Open source statistical package for simple yet exhaustive stats functions.
+* [Feature-engine](https://feature-engine.trainindata.com/en/latest/) - Library with multiple transformers to engineer and select features for machine learning models.
+* [ppscore](https://pypi.org/project/ppscore/) - Library for detecting linear or non-linear relationships between two features.
+* [scikit-learn](https://scikit-learn.org/stable/) - Open source machine learning library that features various algorithms for training a ML model.
+* [SciPy](https://scipy.org/) - Library used for scientific computing and technical computing.
+* [XGBoost](https://xgboost.readthedocs.io/en/stable/) - Optimised distributed gradient boosting library.
+* [Imbalanced-learn](https://imbalanced-learn.org/stable/) - Provides tools for dealing with classification problems with imbalanced classes.
+* [Joblib](https://joblib.readthedocs.io/en/stable/) - Provides tools for lightweight pipelining, e.g. caching output values.
+
+[Back to top](#table-of-contents)
+
+## Testing
+
+### Manual Testing
+
+#### User Story Testing
+
+ - Dashboard was manually tested using user stories as a basis for determining success.
+ - Jupyter notebooks were reliant on consecutive functions being successful so manual testing against user stories was deemed irrelevant.
+
+### Validation
+
+All code in the app_pages and src directories was validated as conforming to PEP8 standards using CodeInstitute's PEP8 Linter.
+
+ - Some files had warnings due to 'line too long', however these were related to long strings when writing to the dashboard.
+ - These warnings were ignored as it did not effect the readability of any functions.
+
+### Automated Unit Tests
+
+No automated unit tests have been carried out at this time.
+
+[Back to top](#table-of-contents)
 
 ## Unfixed Bugs
 
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+[Back to top](#table-of-contents)
 
 ## Deployment
 
@@ -131,8 +205,7 @@ Patients of higher age have a higher probability of readmission. This hypothesis
 
 ## Credits
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project.
+[Back to top](#table-of-contents)
 
 ### Content
 
@@ -145,6 +218,8 @@ Patients of higher age have a higher probability of readmission. This hypothesis
 - The photos used on the home and sign-up page are from This Open-Source site
 - The images used for the gallery page were taken from this other open-source site
 
-## Acknowledgements (optional)
+## Acknowledgements
 
 * Thank the people that provided support through this project.
+
+[Back to top](#table-of-contents)
