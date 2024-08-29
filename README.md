@@ -27,10 +27,10 @@
   - [Unfixed Bugs](#unfixed-bugs)
   - [Deployment](#deployment)
     - [Heroku](#heroku)
-  - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+    - [Forking the GitHub Project](#Forking the GitHub Project)
+    - [Making a Local Clone](#Making a Local Clone)
   - [Credits](#credits)
     - [Content](#content)
-    - [Media](#media)
   - [Acknowledgements](#acknowledgements)
 
 ## Dataset Content
@@ -76,17 +76,17 @@ This project aims to reduce patient readmission rates to improve healthcare qual
 * Hypothesis 1:
 
   - Patients with a higher number of lab procedures are more likely to be readmitted. This hypothesis assumes that a higher number of lab procedures indicates a more severe or complex medical condition, which could lead to a higher chance of readmission.
-  - **Validation** :
+  - **Validation** : By ploting the two variables, carying out a correlation study between them and perform statistical test.
 
 * Hypothesis 2:
 
   - Patients who had a change in their diabetes medication during their hospital stay are more likely to be readmitted. This hypothesis suggests that changes in diabetes management might lead to instability in blood sugar control, increasing the likelihood of readmission.
-  - **Validation** :
+  - **Validation** : By ploting the "change" variable and the target variable "readmitted " in a barplot and using variable "diabetes_med" as hue and perform statistical tests.
 
 * Hypothesis 3:
 
   - Patients of higher age have a higher probability of readmission. This hypothesis is based on the idea that patients of higher age are more likely to have multiple chronicle health issues leading to readmissions.
-  - **Validation** :
+  - **Validation** : Groupe the various age categories to see their distribution against the target variable "readmitted" and perform statistical tests.
 
 [Back to top](#table-of-contents)
 
@@ -104,13 +104,26 @@ This project aims to reduce patient readmission rates to improve healthcare qual
 
  - We need to predict whether a patient will be readmitted or not.
  - For this task we need to build a binary classification model.
+ - Extensive hyperparameter optimisation will give us the best chance at a highly accurate prediction.
  - This will be performed during the Modeling and Evaluation step of the CRISP -M workflow.
 
 [Back to top](#table-of-contents)
 
 ## ML Business Case
 
-* In the previous bullet, you potentially visualized an ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
+Classification Model
+
+* We want a ML model to predict whether a patient be readmitted after being realeased from hospital based upon previously gathered patient data. The target variable, 'readmitted', is categorical and contains two classes: 0 (not readmitted) and 1 (readmitted).
+* We will consider a classification model, a supervised model with a two-class, single-label output that matches the target.
+* The model success metrics are:
+ - at least 70% recall for readmission on the train and test sets
+* The model will be considered a failure if:
+ - the model fails to achieve 70% recall for readmission
+ - the model fails to achieve 70% precision for no readmission (falsely indicating patients are at risk)
+* The model output is defined as a flag, indicating if a patient will have heart disease or not and the associated probability of heart disease.
+* The training data to fit the model comes from: [Kaggle](www.kaggle.com )
+* The dataset contains: 25000 observations and 16 attributes.
+* Target: readmitted; Features: all other attributes.
 
 [Back to top](#table-of-contents)
 
@@ -120,15 +133,39 @@ This project aims to reduce patient readmission rates to improve healthcare qual
 
 ## Dashboard Design
 
-### Page 1:
+### Page 1: Poriject Summary 
 
-### Page 2:
+* Section 1- Quick summary
+ - Introduction to project
+ - Description of dataset, where was it sourced
+ - Link to readme
+* Section 2 - Business Requirements
+ - Description of business requirements
 
-### Page 3:
+### Page 2: Project Hypotheses
 
-### Page 4:
+* Outline the three project hypothesis
+* Present validation of each hypothesis
 
-### Page 5:
+### Page 3: Feature Correlation study
+
+* State business requirement 1
+* Overview of dataset - display first 10 rows of data and describe dataset shape
+* Display correlation results and PPS heatmap
+* Display distributions of correlated features against target using a prallel plot.
+* Conclusions
+
+### Page 4: Predict Patient readmission
+
+* State business requirement 2
+* Widget inputs for prediction
+* "Run prediction" button to run inputted data through the ML model and output a prediction and % chance
+
+### Page 5: Classification Performance Metrics
+
+* Summary of model performance and metrics
+* Model pipeline, features used to train the model and how they were selected
+* Documentation of model performance on train and test sets
 
 [Back to top](#table-of-contents)
 
@@ -164,9 +201,6 @@ The technologies used throughout the development are listed below:
 
 #### User Story Testing
 
- - Dashboard was manually tested using user stories as a basis for determining success.
- - Jupyter notebooks were reliant on consecutive functions being successful so manual testing against user stories was deemed irrelevant.
-
 ### Validation
 
 All code in the app_pages and src directories was validated as conforming to PEP8 standards using CodeInstitute's PEP8 Linter.
@@ -181,6 +215,8 @@ No automated unit tests have been carried out at this time.
 [Back to top](#table-of-contents)
 
 ## Unfixed Bugs
+
+* No unfixed bugs found at the moment of deployment.
 
 [Back to top](#table-of-contents)
 
@@ -199,24 +235,24 @@ No automated unit tests have been carried out at this time.
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
-## Main Data Analysis and Machine Learning Libraries
+### Forking the GitHub Project
 
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+To make a copy of the GitHub repository to use on your own account, one can fork the repository by doing as follows:
+
+* On the page for the repository, go to the 'Fork' button on the top right of the page, and click it to create a copy of the repository which should then be on your own GitHub account.
+
+### Making a Local Clone
+
+* On the page for the repository, click the 'Code' button
+* To clone the repository using HTTPS, copy the HTTPS URL provided there.
+* Open your CLI application of choice and change the current working directory to the location where you want the cloned directory to be made.
+* Type git clone, and then paste the previously copied URL to create the clone
 
 ## Credits
 
 [Back to top](#table-of-contents)
 
 ### Content
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
 
 ## Acknowledgements
 
