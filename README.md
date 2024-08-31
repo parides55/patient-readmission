@@ -101,13 +101,13 @@ This project aims to reduce patient readmission rates to improve healthcare qual
 Classification Model
 
 - We want a ML model to predict whether a patient be readmitted after being released from hospital based upon previously gathered patient data. The target variable, 'readmitted', is categorical and contains two classes: 0 (not readmitted) and 1 (readmitted).
-- We will consider a classification model, a supervised model with a two-class, single-label output that matches the target.
+- We will consider a classification model, a supervised model with a two-class output that matches the target.
 - The model success metrics are:
   - at least 70% recall for readmission on the train and test sets
 - The model will be considered a failure if:
   - the model fails to achieve 70% recall for readmission
-  - the model fails to achieve 70% precision for no readmission (falsely indicating patients are at risk)
-- The model output is a text output, indicating if a patient will be readmitted or not in the future.
+  - the model fails to achieve 60% precision for no readmission (falsely indicating patients are at risk)
+- The model output is defined as a text output, indicating the probability of a patient to be readmitted or not.
 - The training data to fit the model comes from: [Kaggle](www.kaggle.com )
 - The dataset contains: 25000 observations and 16 attributes.
 - Target: readmitted; Features: all other attributes.
@@ -201,14 +201,14 @@ The technologies used throughout the development are listed below:
 - [Pandas](https://pandas.pydata.org/docs/index.html) - Open source library for data manipulation and analysis.
 - [Numpy](https://numpy.org/doc/stable/index.html) - Adds support for large, multi-dimensional arrays and matrices, and high-level mathematical functions.
 - [YData Profiling](https://docs.profiling.ydata.ai/latest/) - For data profiling and exploratory data analysis.
-- [Matplotlib](https://matplotlib.org/) - Comprehensive library for creating static, animated and interactive visualisations.
-- [Seaborn](https://seaborn.pydata.org/) - Another data visualisation library for drawing attractive and informative statistical graphics.
+- [Matplotlib](https://matplotlib.org/) - Comprehensive library for creating static, animated and interactive visualizations.
+- [Seaborn](https://seaborn.pydata.org/) - Another data visualization library for drawing attractive and informative statistical graphics.
 - [Pingouin](https://pingouin-stats.org/build/html/index.html) - Open source statistical package for simple yet exhaustive stats functions.
 - [Feature-engine](https://feature-engine.trainindata.com/en/latest/) - Library with multiple transformers to engineer and select features for machine learning models.
 - [ppscore](https://pypi.org/project/ppscore/) - Library for detecting linear or non-linear relationships between two features.
 - [scikit-learn](https://scikit-learn.org/stable/) - Open source machine learning library that features various algorithms for training a ML model.
 - [SciPy](https://scipy.org/) - Library used for scientific computing and technical computing.
-- [XGBoost](https://xgboost.readthedocs.io/en/stable/) - Optimised distributed gradient boosting library.
+- [XGBoost](https://xgboost.readthedocs.io/en/stable/) - Optimized distributed gradient boosting library.
 - [Imbalanced-learn](https://imbalanced-learn.org/stable/) - Provides tools for dealing with classification problems with imbalanced classes.
 - [Joblib](https://joblib.readthedocs.io/en/stable/) - Provides tools for lightweight pipelining, e.g. caching output values.
 
@@ -303,9 +303,21 @@ To make a copy of the GitHub repository to use on your own account, one can fork
 
 ## Credits
 
-[Back to top](#table-of-contents)
+- Through the whole project I was following particularly the CI's *Churnometer* walkthrough project and example.
 
-### Content
+### Content and Code
+
+- The code for the histogram/QQ plots were taken from the Code Institute *Churnometer* walkthrough project.
+- The idea to apply LogTransformer, StandardScaler and PCA to the numerical values was taken from the [Code Section](https://www.kaggle.com/code/dubradave/predicting-hospital-readmission) in kaggle, from the user "DD".
+- The code for the PPS heatmap function was taken from the Code Institute "Exploratory Data Analysis Tools" module.
+- The code to asses missing values and levels was taken form the Code Institute *Churnometer* walkthrough project.
+- The custom function for checking the effect of data cleaning on distribution was taken from the Code Institute "Data Analytics Packages - ML: feature-engine" module.
+- The custom function for analyzing transformations during feature engineering was taken from the Code Institute "Data Analytics Packages - ML: feature-engine" module.
+- The custom function for carrying out hyperparameter optimization was taken from the Code Institute "Data Analytics Packages - ML: Scikit-learn" module.
+- The custom function for displaying the confusion matrix and analyzing model performance was taken from the Code Institute "Data Analytics Packages - ML: Scikit-learn" module.
+- The multi-page class was taken from the Code Institute "Data Analysis & Machine Learning Toolkit" streamlit lessons.
+
+[Back to top](#table-of-contents)
 
 ## Acknowledgements
 
