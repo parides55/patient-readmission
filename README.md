@@ -1,5 +1,11 @@
 # Patient Readmission Predictor - A Predictive Classification Model for predicting patient's readmission
 
+Generally the hospital readmissions are costly for Hospitals and Health providers and use a lot of resources that can be utilized better to achieve better and more expeditious health care services.
+
+The goal of this project is to develop a predictive analytics application that forecasts the likelihood of patient readmission after discharge from the hospital. This application aims to assist healthcare providers in identifying high-risk patients, thereby enabling targeted interventions to reduce readmission rates and improve patient outcomes.
+
+To achieve the goal I have used a binary classification model and through data analysis and visualization I have made3 hypotheses.
+
 ## Table of Contents
 
 - [Dataset Content](#dataset-content)
@@ -85,7 +91,7 @@ This project aims to reduce patient readmission rates to improve healthcare qual
 - Business requirement 2: Classification Model
   - We need to predict whether a patient will be readmitted or not.
   - For this task we need to build a binary classification model.
-  - Extensive hyperparameter optimisation will give us the best chance at a highly accurate prediction.
+  - Extensive hyperparameter optimization will give us the best chance at a highly accurate prediction.
   - This will be performed during the Modeling and Evaluation step of the CRISP -M workflow.
 
 [Back to top](#table-of-contents)
