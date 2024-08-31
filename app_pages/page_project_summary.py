@@ -57,9 +57,9 @@ def page_summary_body():
         f"* **diag_3** - additional secondary diagnosis\n"
         f"* **glucose_test** - whether the glucose serum came out as high (> 200), normal, or not performed\n"
         f"* **A1Ctest** - whether the A1C level of the patient came out as high (> 7%), normal, or not performed\n"
-        f"* **change** - whether there was a change in the diabetes medication ('yes' or 'no')\n"
-        f"* **diabetes_med** - whether a diabetes medication was prescribed ('yes' or 'no')\n"
-        f"* **readmitted** - if the patient was readmitted at the hospital ('yes' or 'no')\n"
+        f"* **change** - whether there was a change in the diabetes medication (1 = 'yes' or 0 = 'no')\n"
+        f"* **diabetes_med** - whether a diabetes medication was prescribed (1 = 'yes' or 0 = 'no')\n"
+        f"* **readmitted** - if the patient was readmitted at the hospital (1 = 'yes' or 0 = 'no')\n"
     )
     
     st.success(
