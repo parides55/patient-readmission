@@ -218,9 +218,9 @@ The technologies used throughout the development are listed below:
 
 ### Manual Testing
 
+The Jupyter Notebooks have covered and fulfilled satisfactory all the data analyst, data scientist and data engineer user stories so no manual testing was necessary.
 
-
-#### User Story Testing
+#### User Story Testing (technical and non-technical users)
 
 - *As a non-technical user, I can view a project summary that describes the project, dataset and business requirements so I can understand what the project is about.*
 
