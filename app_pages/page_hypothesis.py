@@ -34,8 +34,8 @@ def hypothesis_1():
 
     # Results
 
-    st.write(f"Hypothesis 1 - Correlation: {correlation}, {p_value_correlation}")
-    st.write(f"Hypothesis 1 - T-test: {t_stat_lab_procedures}, {p_value_lab_procedures}")
+    st.write(f"Hypothesis 1 - Correlation: {correlation}, P-value: {p_value_correlation}")
+    st.write(f"Hypothesis 1 - T-test: {t_stat_lab_procedures}, P-value: {p_value_lab_procedures}")
 
 
 def hypothesis_2():
@@ -56,7 +56,7 @@ def hypothesis_2():
     chi2, p_value_chi2, _, _ = chi2_contingency(contingency_table)
 
     # Results
-    st.write(f"Hypothesis 2 - Chi-Square Test: {chi2}, {p_value_chi2}")
+    st.write(f"Hypothesis 2 - Chi-Square Test: {chi2}, P-value: {p_value_chi2}")
     
 
 def hypothesis_3():
@@ -85,14 +85,15 @@ def hypothesis_3():
     df_age_group = df[['age']].copy()
     df_age_group['age_group'] = df['age'].apply(categorize_age)
     
-    df_age_group['age_group'].value_counts(normalize=True).mul(100).round(2).astype(str) + '%'
+    st.dataframe(
+        df_age_group['age_group'].value_counts(normalize=True).mul(100).round(2).astype(str) + '%'
+        )
     
     contingency_table_age = pd.crosstab(df_age_group['age_group'], df['readmitted'])
     chi2_age, p_value_age, _, _ = chi2_contingency(contingency_table_age)
     
     # Results
-    st.write(f"Chi-Square Statistic: {chi2_age}")
-    st.write(f"P-Value: {p_value_age}")
+    st.write(f"Chi-Square Statistic: {chi2_age}, P-Value: {p_value_age}")
 
 
 def page_hypothesis_body():
@@ -108,8 +109,13 @@ def page_hypothesis_body():
     st.write(f"##### Findings:\n\n")
     
     st.warning(
-        f"* There is a very weak positive correlation between the number of lab procedures and readmission, but it is statistically significant due to the low p-value.\n\n"
-        f"**Conclusion**: Hypothesis 1 is supported by the data, as there is a statistically significant but weak relationship between the number of lab procedures and the likelihood of readmission."
+        f"* There is a very weak positive correlation between the number of lab procedures and "
+        f"readmission, but it is statistically significant due to the low p-value.\n\n"
+        f"**Conclusion**: Hypothesis 1 is supported by the data, as there is a statistically "
+        f"significant but weak relationship between the number of lab procedures and the likelihood "
+        f"of readmission, however, the difference in the average number of lab procedures between "
+        f"readmitted and non-readmitted patients is not significant, which makes the n_lab_procedures "
+        f"feature a contributing factor but not the only one. Other factors need to be consider as well."
     )
     
     if st.checkbox("Check the data for hypothesis 1"):
