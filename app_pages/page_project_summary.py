@@ -31,7 +31,10 @@ def page_summary_body():
         f"* Hospital Stay Information: Length of stay (time_in_hospital), number of procedures, "
         f"medications, outpatient visits, inpatient visits, and emergency visits.\n"
         f"* Clinical Information: Primary, secondary, and tertiary diagnoses (diag_1, diag_2, diag_3), "
-        f"glucose levels, and A1C test results.\n"
+        f"glucose levels, and A1C test results."
+        f"*(The A1C test is a common blood test used to diagnose type 1 and type 2 diabetes. "
+        f"If you're living with diabetes, the test is also used to monitor how well you're "
+        f"managing blood sugar levels.)*\n"
         f"* Treatment Information: Whether the patient's treatment plan included changes (change) "
         f"in their medication, and whether diabetes medications were administered (diabetes_med).\n"
         f"* Target Variable: A binary indicator (readmitted) showing whether the patient was readmitted.\n"
@@ -67,5 +70,5 @@ def page_summary_body():
         f"**Business Requirements 1** - The client is interested to know the key factors "
         f"that will make a patient to be readmitted.\n\n"
         f"**Business Requirements 2** - The client is interested to know whether a patient "
-        f"be readmitted or not by using patient's data.\n\n"
+        f"will be readmitted or not by using patient's data.\n\n"
     )
