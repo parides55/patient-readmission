@@ -311,7 +311,6 @@ To make a copy of the GitHub repository to use on your own account, one can fork
 - The idea to apply LogTransformer, StandardScaler and PCA to the numerical values was taken from the [Code Section](https://www.kaggle.com/code/dubradave/predicting-hospital-readmission) in kaggle, from the user "DD".
 - The code for the PPS heatmap function was taken from the Code Institute "Exploratory Data Analysis Tools" module.
 - The code to asses missing values and levels was taken form the Code Institute *Churnometer* walkthrough project.
-- The custom function for checking the effect of data cleaning on distribution was taken from the Code Institute "Data Analytics Packages - ML: feature-engine" module.
 - The custom function for analyzing transformations during feature engineering was taken from the Code Institute "Data Analytics Packages - ML: feature-engine" module.
 - The custom function for carrying out hyperparameter optimization was taken from the Code Institute "Data Analytics Packages - ML: Scikit-learn" module.
 - The custom function for displaying the confusion matrix and analyzing model performance was taken from the Code Institute "Data Analytics Packages - ML: Scikit-learn" module.
