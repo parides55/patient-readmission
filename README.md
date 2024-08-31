@@ -2,36 +2,19 @@
 
 ## Table of Contents
 
-- [Patient Readmission Predictor - A Predictive Classification Model for predicting patient's readmission](#patient-readmission-predictor---a-predictive-classification-model-for-predicting-patients-readmission)
-  - [Table of Contents](#table-of-contents)
-  - [Dataset Content](#dataset-content)
-  - [Business Requirements](#business-requirements)
-  - [Hypothesis and how to validate?](#hypothesis-and-how-to-validate)
-  - [The rationale to map the business requirements to the Data Visualizations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
-  - [ML Business Case](#ml-business-case)
-  - [Epics and User Stories](#epics-and-user-stories)
-  - [Dashboard Design](#dashboard-design)
-    - [Page 1:](#page-1)
-    - [Page 2:](#page-2)
-    - [Page 3:](#page-3)
-    - [Page 4:](#page-4)
-    - [Page 5:](#page-5)
-  - [Technologies Used](#technologies-used)
-    - [Languages:](#languages)
-    - [Python Packages](#python-packages)
-  - [Testing](#testing)
-    - [Manual Testing](#manual-testing)
-      - [User Story Testing](#user-story-testing)
-    - [Validation](#validation)
-    - [Automated Unit Tests](#automated-unit-tests)
-  - [Unfixed Bugs](#unfixed-bugs)
-  - [Deployment](#deployment)
-    - [Heroku](#heroku)
-    - [Forking the GitHub Project](#Forking the GitHub Project)
-    - [Making a Local Clone](#Making a Local Clone)
-  - [Credits](#credits)
-    - [Content](#content)
-  - [Acknowledgements](#acknowledgements)
+- [Dataset Content](#dataset-content)
+- [Business Requirements](#business-requirements)
+- [Hypothesis and how to validate?](#hypothesis-and-how-to-validate)
+- [The rationale to map the business requirements to the Data Visualizations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
+- [ML Business Case](#ml-business-case)
+- [Epics and User Stories](#epics-and-user-stories)
+- [Dashboard Design](#dashboard-design)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Unfixed Bugs](#unfixed-bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
 
 ## Dataset Content
 
@@ -94,18 +77,18 @@ This project aims to reduce patient readmission rates to improve healthcare qual
 
 * Business requirement 1: Data Visualization and Correlation study
 
- - We need to perform a correlation study to determine which features correlate most closely to the target.
- - A Pearson's correlation will indicate linear relationships between numerical variables.
- - A Spearman's correlation will measure the monotonic relationships between variables.
- - A Predicitve Power Score can also be used to determine relationships between the variables and if they have any predictive power to against the target variable.
- - This will be performed during the Data Collection and Preparation steps of the CRISP-DM workflow. 
+   - We need to perform a correlation study to determine which features correlate most closely to the target.
+   - A Pearson's correlation will indicate linear relationships between numerical variables.
+   - A Spearman's correlation will measure the monotonic relationships between variables.
+   - A Predicitve Power Score can also be used to determine relationships between the variables and if they have any predictive power to against the target variable.
+   - This will be performed during the Data Collection and Preparation steps of the CRISP-DM workflow. 
 
 * Business requirement 2: Classification Model
 
- - We need to predict whether a patient will be readmitted or not.
- - For this task we need to build a binary classification model.
- - Extensive hyperparameter optimisation will give us the best chance at a highly accurate prediction.
- - This will be performed during the Modeling and Evaluation step of the CRISP -M workflow.
+   - We need to predict whether a patient will be readmitted or not.
+   - For this task we need to build a binary classification model.
+   - Extensive hyperparameter optimisation will give us the best chance at a highly accurate prediction.
+   - This will be performed during the Modeling and Evaluation step of the CRISP -M workflow.
 
 [Back to top](#table-of-contents)
 
@@ -129,6 +112,38 @@ Classification Model
 
 ## Epics and User Stories
 
+For better planning, preparation and execution of this project I have decided to divide the project into 5 Epics. Below I'm listing the user stories for each Epic.
+
+### Epic 1 : Data Collection and Preparation
+
+  - As a data analyst, I need to gather and pre-process patient data to ensure it is ready for analysis.
+
+### Epic 2 : Data Analysis, Visualization and Cleaning
+
+  - As a data analyst I can visualize each feature and its distribution so I can determine what cleaning tasks I need to carry out.
+  - As a data analyst I can find and handle appropriately missing data so I can prepare the dataset for ML model.
+  - As a data analyst I can determine whether the target variable requires balancing so I can ensure the ML model is not fed imbalance data.
+  - As a data scientist I can carry out feature engineering so I can best transform data for the ML model
+  - As a data scientist I can visualize and analyze the dataset so i can determine which attributes correlate most with the target variable and validate the project's hypotheses.
+
+### Epic 3: Model Training, Otpimization and Validation
+
+  - As data engineer I can determine the best algorith and best hyperparameters so I can ensure the ML model gives the best results.
+  - As data engineer I can determine the best features from the ML pipeline to determine whether the ML model can be optimized further.
+  - As data scientist I can evaluate the ML model's performance to determine whether it can successfully predict patient readmission.
+
+### Epic 4 : Dashboard Design and Development
+
+  - As a non-technical user, I can view a project summary that describes the project, dataset and business requirements so I can understand what the project is about.
+  - As a non-technical user, I can view the project hypotheses and validations to determine what the project was trying to achieve and whether it was successful.
+  - As a non-technical/technical user, I can enter unseen data into the model and receive a prediction.
+  - As a technical user, I can view the correlation analysis to see how the outcomes were reached.
+  - As a technical user, I can view all the data to understand the model performance and see statistics related to the model.
+
+### Epic 5: Dashboard Deployment and Release
+
+  - As a user, I can view the project dashboard on a live deployed website.
+
 [Back to top](#table-of-contents)
 
 ## Dashboard Design
@@ -136,11 +151,11 @@ Classification Model
 ### Page 1: Poriject Summary 
 
 * Section 1- Quick summary
- - Introduction to project
- - Description of dataset, where was it sourced
- - Link to readme
+   - Introduction to project
+   - Description of dataset, where was it sourced
+   - Link to readme
 * Section 2 - Business Requirements
- - Description of business requirements
+   - Description of business requirements
 
 ### Page 2: Project Hypotheses
 
@@ -247,6 +262,8 @@ To make a copy of the GitHub repository to use on your own account, one can fork
 * To clone the repository using HTTPS, copy the HTTPS URL provided there.
 * Open your CLI application of choice and change the current working directory to the location where you want the cloned directory to be made.
 * Type git clone, and then paste the previously copied URL to create the clone
+
+[Back to top](#table-of-contents)
 
 ## Credits
 
