@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-DATASET = pd.read_csv(f"outputs/datasets/collection/HospitalReadmission.csv").head(10)
+DATASET = pd.read_csv(f"outputs/datasets/collection/HospitalReadmissions.csv").head(10)
 
 def page_summary_body():
     st.write(f'#### **Project Summary**\n\n')
