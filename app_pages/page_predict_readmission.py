@@ -13,6 +13,10 @@ def page_prediction_body():
     model_pipeline = load_pkl_file(
         f"outputs/ml_pipeline/predict_readmission/{version}/clf_pipeline_model.pkl"
     )
+    best_features = (pd.read_csv(f"outputs/ml_pipeline/predict_readmission/{version}/X_train.csv")
+                    .columns
+                    .to_list()
+                    )
     
     st.info(
         f"##### Business requirement 2: Classification Model\n\n"
@@ -28,7 +32,7 @@ def page_prediction_body():
     
     if st.button("Run Predictive Analysis"):
         st.write(
-            predict_readmission(X_live, dc_fe_pipeline, model_pipeline)
+            predict_readmission(X_live, dc_fe_pipeline, model_pipeline, best_features)
         )
 
 

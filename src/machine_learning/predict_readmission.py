@@ -2,11 +2,7 @@ import streamlit as st
 import pandas as pd
 
 
-def predict_readmission(X_live, readmission_pipeline_dc_fe, readmission_pipeline_model):
-    
-    best_features = X_live.filter(
-        pd.read_csv("outputs/ml_pipeline/predict_readmission/v1/X_train.csv").columns.to_list()
-        )
+def predict_readmission(X_live, readmission_pipeline_dc_fe, readmission_pipeline_model, best_features):
 
     # from live data, subset features related to this pipeline
     X_live_readmission = X_live.filter(best_features)
