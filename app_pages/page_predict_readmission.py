@@ -2,17 +2,17 @@ import streamlit as st
 import pandas as pd
 
 from src.data_management import load_hospital_dataset, load_pkl_file
-#from src.machine_learning.predict_readmission import predict_patient_readmission
+from src.machine_learning.predict_readmission import predict_readmission
 
 def page_prediction_body():
     
     version = "v1"
-    # dc_fe_pipeline = load_pkl_file(
-    #     f"outputs/ml_pipeline/predict_readmission/{version}/data_cleaning_and_feat_engineering_pipeline.pkl"
-    # )
-    # model_pipeline = load_pkl_file(
-    #     f"outputs/ml_pipeline/predict_readmission/{version}/classification_pipeline.pkl"
-    # )
+    dc_fe_pipeline = load_pkl_file(
+        f"outputs/ml_pipeline/predict_readmission/{version}/clf_pipeline_data_cleaning_feat_eng.pkl"
+    )
+    model_pipeline = load_pkl_file(
+        f"outputs/ml_pipeline/predict_readmission/{version}/clf_pipeline_model.pkl"
+    )
     
     st.info(
         f"##### Business requirement 2: Classification Model\n\n"
@@ -27,7 +27,8 @@ def page_prediction_body():
     X_live = DrawInputsWidgets()
     
     if st.button("Run Predictive Analysis"):
-        st.write("predict_patient_readmission(X_live, dc_fe_pipeline, model_pipeline)"
+        st.write(
+            predict_readmission(X_live, dc_fe_pipeline, model_pipeline)
         )
 
 
