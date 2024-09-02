@@ -6,6 +6,7 @@ import seaborn as sns
 import plotly.express as px
 import joblib
 
+
 # @st.cache(suppress_st_warning=True, allow_output_mutation=True)
 def load_hospital_dataset(file_name):
     df = pd.read_csv(f"outputs/datasets/collection/{file_name}")
@@ -28,9 +29,10 @@ def plot_numerical(df, col):
     ax = sns.histplot(df, x=col, kde=True, hue='readmitted')
     plt.title(f"{col}", fontsize=20, y=1.05)
     st.pyplot(fig)
-    
+
 
 def plot_parallel_plot():
     df_parallel = load_hospital_dataset("HospitalReadmissionsParallel.csv")
-    fig = px.parallel_categories(df_parallel, color='readmitted', color_continuous_scale="bluered")
+    fig = px.parallel_categories(
+        df_parallel, color='readmitted', color_continuous_scale="bluered")
     st.plotly_chart(fig)

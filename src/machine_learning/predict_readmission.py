@@ -2,21 +2,27 @@ import streamlit as st
 import pandas as pd
 
 
-def predict_readmission(X_live, readmission_pipeline_dc_fe, readmission_pipeline_model, best_features):
+def predict_readmission(
+    X_live, readmission_pipeline_dc_fe,
+    readmission_pipeline_model, best_features
+):
 
     # from live data, subset features related to this pipeline
     X_live_readmission = X_live.filter(best_features)
 
     # apply data cleaning / feat engine pipeline to live data
-    X_live_readmission_dc_fe = readmission_pipeline_dc_fe.transform(X_live_readmission)
+    X_live_readmission_dc_fe = readmission_pipeline_dc_fe.transform(
+        X_live_readmission)
 
     # predict
-    readmission_prediction = readmission_pipeline_model.predict(X_live_readmission_dc_fe)
+    readmission_prediction = readmission_pipeline_model.predict(
+        X_live_readmission_dc_fe)
     readmission_prediction_proba = readmission_pipeline_model.predict_proba(
         X_live_readmission_dc_fe)
 
     # Create a logic to display the results
-    readmission_prob = readmission_prediction_proba[0, readmission_prediction][0]*100
+    readmission_prob = readmission_prediction_proba[
+        0, readmission_prediction][0]*100
     if readmission_prediction == 1:
         readmission_result = 'will'
     else:
