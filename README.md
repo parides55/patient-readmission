@@ -1,4 +1,4 @@
-# Patient Readmission Predictor - A Predictive Classification Model for predicting patient's readmission
+# [Patient Readmission Predictor](https://patient-readmission-c43bc847bc51.herokuapp.com/) - A Predictive Classification Model for predicting patient's readmission
 
 Generally the hospital readmissions are costly for Hospitals and Health providers and use a lot of resources that can be utilized better to achieve better and more expeditious health care services.
 
@@ -255,6 +255,23 @@ The Jupyter Notebooks have covered and fulfilled satisfactory all the data analy
 ### Validation
 
 All code in the app_pages and src directories was validated as conforming to PEP8 standards using CodeInstitute's PEP8 Linter.
+
+<details>
+
+<summary>PEP8 validations screenshots</summary>
+
+![app.py](https://github.com/parides55/patient-readmission/blob/f0f2a81202967980db5caa66764bdffc4623411a/assets/readme_docs/app.png)
+![multipage.py](https://github.com/parides55/patient-readmission/blob/f0f2a81202967980db5caa66764bdffc4623411a/assets/readme_docs/multipage.png)
+![summary_page](https://github.com/parides55/patient-readmission/blob/f0f2a81202967980db5caa66764bdffc4623411a/assets/readme_docs/summary.png)
+![hypotheses_page](https://github.com/parides55/patient-readmission/blob/f0f2a81202967980db5caa66764bdffc4623411a/assets/readme_docs/hypotheses.png)
+![correlation_page](https://github.com/parides55/patient-readmission/blob/f0f2a81202967980db5caa66764bdffc4623411a/assets/readme_docs/app.png)
+![predict_readmission_page](https://github.com/parides55/patient-readmission/blob/f0f2a81202967980db5caa66764bdffc4623411a/assets/readme_docs/page_predict_readmission.png)
+![ml_performance_pae](https://github.com/parides55/patient-readmission/blob/f0f2a81202967980db5caa66764bdffc4623411a/assets/readme_docs/MLperformance.png)
+![data_maangement_functions](https://github.com/parides55/patient-readmission/blob/f0f2a81202967980db5caa66764bdffc4623411a/assets/readme_docs/data_management.png)
+![predict_readmission_function](https://github.com/parides55/patient-readmission/blob/f0f2a81202967980db5caa66764bdffc4623411a/assets/readme_docs/predict_readmission.png)
+![evaluate_function](https://github.com/parides55/patient-readmission/blob/f0f2a81202967980db5caa66764bdffc4623411a/assets/readme_docs/evaluate.png)
+
+</details>
 
 - Some files had warnings due to 'line too long', however these were related to long strings when writing to the dashboard.
 - These warnings were ignored as it did not effect the readability of any functions.
