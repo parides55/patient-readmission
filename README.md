@@ -1,5 +1,7 @@
 # [Patient Readmission Predictor](https://patient-readmission-c43bc847bc51.herokuapp.com/) - A Predictive Classification Model for predicting patient's readmission
 
+![Responsive image showing the live website](https://github.com/parides55/patient-readmission/blob/2de65ccfcb550cf578b83a414a5bbb5d84002f37/assets/readme_docs/am_i_responsivepng.png)
+
 Generally the hospital readmissions are costly for Hospitals and Health providers and use a lot of resources that can be utilized better to achieve better and more expeditious health care services.
 
 The goal of this project is to develop a predictive analytics application that forecasts the likelihood of patient readmission after discharge from the hospital. This application aims to assist healthcare providers in identifying high-risk patients, thereby enabling targeted interventions to reduce readmission rates and improve patient outcomes.
