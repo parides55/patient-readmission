@@ -80,4 +80,4 @@ def page_ML_performance_body():
     clf_performance(X_train=X_train, y_train=y_train,
                     X_test=X_test, y_test=y_test,
                     pipeline=model_pipeline,
-                    label_map=["Will not readmit", "Will readmit"])
+                    label_map=["Will readmit", "Will not readmit"])

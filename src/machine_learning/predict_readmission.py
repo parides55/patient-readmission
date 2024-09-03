@@ -4,12 +4,11 @@ import pandas as pd
 
 def predict_readmission(
     X_live, readmission_pipeline_dc_fe,
-    readmission_pipeline_model, best_features
+    readmission_pipeline_model
 ):
 
     # from live data, subset features related to this pipeline
-    X_live_readmission = X_live.filter(best_features)
-
+    X_live_readmission = X_live
     # apply data cleaning / feat engine pipeline to live data
     X_live_readmission_dc_fe = readmission_pipeline_dc_fe.transform(
         X_live_readmission)
