@@ -167,13 +167,14 @@ For better planning, preparation and execution of this project I have decided to
 
 - Outline the three project hypothesis
 - Present validation of each hypothesis
+- Each hypothesis has a checkbox. When its checked presents the associated plot and results from statisticla tests.
 
 ### Page 3: Feature Correlation study
 
 - State business requirement 1
 - Overview of dataset - display first 10 rows of data and describe dataset shape
 - Display correlation results and PPS heatmap
-- Display distributions of correlated features against target using a prallel plot.
+- Display distributions of correlated features against target using a parallel plot.
 - Conclusions
 
 ### Page 4: Predict Patient readmission
