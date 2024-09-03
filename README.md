@@ -205,7 +205,7 @@ The technologies used throughout the development are listed below:
 - [YData Profiling](https://docs.profiling.ydata.ai/latest/) - For data profiling and exploratory data analysis.
 - [Matplotlib](https://matplotlib.org/) - Comprehensive library for creating static, animated and interactive visualizations.
 - [Seaborn](https://seaborn.pydata.org/) - Another data visualization library for drawing attractive and informative statistical graphics.
-- [Pingouin](https://pingouin-stats.org/build/html/index.html) - Open source statistical package for simple yet exhaustive stats functions.
+- [Plotly Express](https://plotly.com/python/) - OAnother data visualization library for drawing attractive and informative statistical graphics.
 - [Feature-engine](https://feature-engine.trainindata.com/en/latest/) - Library with multiple transformers to engineer and select features for machine learning models.
 - [ppscore](https://pypi.org/project/ppscore/) - Library for detecting linear or non-linear relationships between two features.
 - [scikit-learn](https://scikit-learn.org/stable/) - Open source machine learning library that features various algorithms for training a ML model.
