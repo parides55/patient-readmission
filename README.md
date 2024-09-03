@@ -339,6 +339,7 @@ To make a copy of the GitHub repository to use on your own account, one can fork
 
 ## Acknowledgements
 
-- Thank the people that provided support through this project.
+- I would like to thank very much my mentor Mo Shami, who provided me with a big amount of information and a lot of inspiration to help me deliver this project.
+- Also, I could not thank enough my family, who gave me the necessary time and space needed to finish this project.
 
 [Back to top](#table-of-contents)
