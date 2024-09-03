@@ -108,7 +108,7 @@ Classification Model
   - at least 70% recall for readmission on the train and test sets
 - The model will be considered a failure if:
   - the model fails to achieve 70% recall for readmission
-  - the model fails to achieve 60% precision for no readmission (falsely indicating patients are at risk)
+  - the model fails to achieve 60% precision for no readmission (falsely indicating patients are at risk, which still will not put patient's in danger)
 - The model output is defined as a text output, indicating the probability of a patient to be readmitted or not.
 - The training data to fit the model comes from: [Kaggle](www.kaggle.com )
 - The dataset contains: 25000 observations and 16 attributes.
