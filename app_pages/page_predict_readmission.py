@@ -33,6 +33,14 @@ def page_prediction_body():
         st.write(
             predict_readmission(X_live, dc_fe_pipeline, model_pipeline)
         )
+        st.warning(
+            f"### WARNING!\n\n"
+            f" - The model is not perfect and may give incorrect predictions.\n"
+            f" - Refer to the Hypotheses and Correlation Study pages where more "
+            f"information is provided to help make a more informed decision "
+            f"if a patient should be readmitted or not.\n"
+            f" - Refer to the ML Performance page to see model's accuracy.\n"
+        )
 
 
 def DrawInputsWidgets():
