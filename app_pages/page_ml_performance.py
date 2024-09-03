@@ -81,3 +81,17 @@ def page_ML_performance_body():
                     X_test=X_test, y_test=y_test,
                     pipeline=model_pipeline,
                     label_map=["Will readmit", "Will not readmit"])
+    
+    st.error(
+        f"The model did not achieve the required performance.\n"
+        f"The model failed to achieve 70% recall for readmission but "
+        f"achieved the 60% precision for no readmission. The model will "
+        f"need to be retrained to achieve the desired performance metrics."
+        f"*(Business Requirement 2)*"
+    )
+    
+    st.success(
+        f"However, the Data Analysis performed on the dataset successfully "
+        f"identified the key features that are important for predicting "
+        f"readmission. *(Business Requirement 1)*"
+    )
